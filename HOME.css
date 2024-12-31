@@ -1,0 +1,96 @@
+body {
+
+    margin: 0;
+    margin-top: 41.6px;
+    background-color: #e4eef9; /* 添加淡灰色背景 */
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+  }
+
+  /* 頂部導航欄樣式 */
+  #top {
+    background-color: #809bc7;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center; /* 將內容置中 */
+    z-index: 1000;
+  }
+
+  /* 導航欄列表樣式 */
+  #top ul {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    display: flex; /* 水平排列列表項 */
+    align-items: center; /* 垂直置中 */
+  }
+
+  /* 導航欄列表項目樣式 */
+  #top ul li {
+    margin-right: 15px; /* 項目之間的間距 */
+    position: relative;
+  }
+
+  /* 導航項目的連結樣式 */
+  #top ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 40px;
+  }
+
+/* 下拉選單樣式 */
+#top ul li .dropdown {
+    display: none; /* 默認隱藏下拉選單 */
+    position: absolute;
+    top: 120%; /* 讓下拉選單顯示在項目下面 */
+    left: 0;
+    background-color: #809bc7d0; /* 與導航欄相同的顏色 */
+    width: 150px; /* 設定下拉選單最小寬度 */
+    margin-right: 10px;
+    z-index: 1; /* 確保選單顯示在其他元素之上 */
+}
+
+/* 下拉選單項目樣式 */
+#top ul li .dropdown li {
+    padding: 8px 8px; /* 減小padding以縮小項目之間的間距 */
+    text-align: left;
+    font-size: 20px; /* 減小字體大小 */
+}
+
+/* 懸停顯示下拉選單 */
+#top ul li:hover .dropdown {
+    display: block; /* 當鼠標懸停在ALBUMS上時顯示下拉選單 */
+}
+
+/* 下拉選單項目懸停效果 */
+#top ul li .dropdown li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px; /* 統一字體大小 */
+}
+
+/* 下拉選單項目懸停效果 */
+#top ul li .dropdown li a:hover {
+    color: #5981b1; /* 懸停顯示時的顏色 */
+}
+  /* 當前頁面的活動項目樣式 */
+  #top ul li.active a {
+    background-color: rgba(255, 255, 255, 0.741); /* 背景半透明 */
+    color: rgb(255, 255, 255); /* 白色文字 */
+  }
+  .photo {
+    text-align: center; /* 確保容器內部置中 */
+}
+.content {
+  text-align: center; /* 置中 */
+  font-size: 25px; /* 調整文字大小，可以根據需要修改 */
+  line-height: 0.8; /* 調整行高，使文字不會太擠 */
+  margin-top: -130px; /* 加一些上邊距，讓文字不緊貼其他元素 */
+  color: #5981b1;
+
+}

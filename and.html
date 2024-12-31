@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Do+Hyeon&family=Noto+Sans+HK:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="首頁.css">
+    <style> 
+    #who-image {
+        margin-top: -20px;
+    }
+    
+    #who-image {
+        display: block;
+        margin: 80px 20px 0px 170px;
+        width: 60%;
+        max-width: 250px;
+        border-radius: 10px;
+    }
+    
+
+    .content {
+    padding: 10px 0; /* 移除 padding-left 來貼齊左邊 */
+    text-align: left;
+    max-width:1200px;
+    margin: -280px auto 0;
+    }
+
+    .content h1 {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 36px;
+        color: #1e2f5b;
+        padding-left: 60px;
+        margin: 50px 0 0 220px
+    }
+
+    .content p {
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 18px;
+        padding-left: 300px;
+        line-height: 1.8;
+        color: #33477c;
+    }
+    .mv-title {
+    font-size: 24px;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #1e2f5b;
+    text-align: left;
+    margin:60px 0 0 0px
+}
+
+.yt-thumbnail-container {
+    display: inline-block; /* 使 a 標籤只佔據縮圖的區域 */
+    cursor: pointer; /* 改為手型游標，讓使用者知道可以點擊 */
+}
+
+.yt-thumbnail {
+    width: 280px; /* 設定縮圖寬度 */
+    height: auto; /* 自動調整高度，保持比例 */
+    border-radius: 15px; /* 設置圓角 */
+}
+
+.yt-thumbnail-container1 {
+    margin: 30px 0 0 0; /* 這是第一個影片的位子，靠左 */
+}
+
+.yt-thumbnail-container2 {
+    margin: 30px 0 0 160px; /* 第二個影片右移，調整此數值 */
+}
+
+.yt-thumbnail-container3 {
+    margin: 30px 0 0 170px;
+}
+
+.yt-thumbnail-container4 {
+    margin: 40px 50px 10px 160px; /* 這是第一個影片的位子，靠左 */
+}
+
+.yt-thumbnail-container5 {
+    margin: 40px 0 10px 110px; /* 第二個影片右移，調整此數值 */
+}
+
+.yt-thumbnail-container6{
+    margin: 40px 0 10px 170px;
+}
+/* 將父容器設置為 flex 排列 */
+.yt-container {
+    display: flex;
+    justify-content: flex-start; /* 靠左對齊 */
+    gap: 20px; /* 每個區塊之間的間距 */
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    color: #33477c;
+}
+
+/* 各個子元素的個別樣式 */
+.yt-section1 {
+    margin: 10px 0 20px 230px
+}
+
+.yt-section2 {
+    margin: 10px 0 20px 275px
+}
+
+.yt-section3 {
+    margin: 10px 0 20px 295px
+
+}
+.yt-section4 {
+    margin: 15px 0 20px 225px /* 將第一個元素往左移動50px */
+}
+
+
+
+.photo-title {
+    font-size: 24px;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #1e2f5b;
+    text-align: left;
+    margin: 20px 0 20px 163px;  /* 調整與其他元素的間距 */
+}
+
+.mv-title {
+    font-size: 24px;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #1e2f5b;
+    text-align: left;
+    margin: 60px 0 0 0px;
+}
+
+
+
+
+* {box-sizing: border-box;}
+
+.slideshow-container {
+        width: 80%;
+        max-width:800px;
+        position: relative;
+        margin: 30px auto;
+    }
+
+    .mySlides {
+        display: none;
+    }
+
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        user-select: none;
+    }
+
+    .next {
+        right: 0;
+    }
+
+    .prev:hover, .next:hover {
+        background-color:#809bc78b;
+    }
+
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #809bc700;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active, .dot:hover {
+        background-color: #809bc700;
+    }
+
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+
+    .mySlides img {
+        width: 100%;
+        border-radius: 10px;
+    }
+    </style>
+</head>
+<body>
+    
+        <!-- 固定頂部導航欄 -->
+    <div id="top">
+        <ul>
+            <li><a href="HOME.html">HOME</a></li>
+            <li><a href="ARTIST.html" class="artist-link">ARTIST</a>
+                <ul class="dropdown">
+                    <li><a href="SUNGHO.html">SUNGHO</a></li>
+                    <li><a href="RIWOO.html">RIWOO</a></li>
+                    <li><a href="MJH.html">JaeHyun</a></li>
+                    <li><a href="TAESAN.html">TAESAN</a></li>
+                    <li><a href="LEEHAN.html">LEEHAN</a></li>
+                    <li><a href="WOONHAK.html">WOONHAK</a></li>
+                </ul>
+            </li>
+                <li><a href="who.html">ALBUMS</a>
+                    <!-- 下拉選單 -->
+                    <ul class="dropdown">
+                        <li><a href="who.html">WHO!</a></li>
+                        <li><a href="whyT.html">WHY..</a></li>
+                        <li><a href="how.html">HOW?</a></li>
+                        <li><a href="and.html">AND,</a></li>
+                        <li><a href="1999.html">19.99</a></li>
+                    </ul>
+                </li>
+                <li><a href="Official.html">OFFICIAL</a></li>
+        </ul>
+    </div>
+    <div class="photo">
+        <img src="photo/images.jpg" alt="A1" id="who-image">
+    </div>
+    
+    <!-- WHO頁面內容 -->
+    <div class="content">
+        <h1>《AND,》</h1>
+        <p>BOYNEXTDOOR日本出道的首張日語單曲，由KOZ娛樂製作並於2024/7/10發行，專輯共收錄了4首歌曲，包含全新日語單曲〈GOOD DAY〉。</p>
+        <p>2024年5/6，官方宣布BOYNEXTDOOR將於7/10以單曲〈AND,〉於日本出道。6/20發行〈Earth, Wind & Fire〉日文版數位音源。7/10公開專輯主打曲音樂錄影帶及全專音源，並發行單曲。</p>
+
+        <h2 class="mv-title">SONG</h2>
+        
+        <!-- 加入 YouTube 影片縮圖連結 -->
+        <a href="https://youtu.be/-XWa9OidafM?si=8w1OGtDYkvwybCBk" target="_blank" class="yt-thumbnail-container yt-thumbnail-container1">
+            <img src="https://img.youtube.com/vi/-XWa9OidafM/0.jpg" alt="YouTube Video Thumbnail" class="yt-thumbnail">
+        </a>
+        
+        <a href="https://youtu.be/pvG71IuqdX0?si=oE_TwzDLfHrMJuOI" target="_blank" class="yt-thumbnail-container yt-thumbnail-container2">
+            <img src="https://img.youtube.com/vi/pvG71IuqdX0/0.jpg" alt="YouTube Video Thumbnail" class="yt-thumbnail">
+        </a>
+        
+        <a href="https://youtu.be/4rBiu4YB1Bo?si=Lt60fuEm921OUgx6" target="_blank" class="yt-thumbnail-container yt-thumbnail-container3">
+            <img src="https://img.youtube.com/vi/4rBiu4YB1Bo/0.jpg" alt="YouTube Video Thumbnail" class="yt-thumbnail">
+        </a>                                         
+    </div>
+    <div class="yt-container">
+        <div class="yt-section yt-section1">But Sometimes</div>
+        <div class="yt-section yt-section2">Earth, Wind & Fire</div>
+        <div class="yt-section yt-section3">GOOD DAY</div>
+    </div>
+
+    <div class="yt-thumbnails-row">
+        <a href="https://youtu.be/5tM_QZ0fAQI?si=qvtii0NoSjc5EM60" target="_blank" class="yt-thumbnail-container yt-thumbnail-container4">
+            <img src="https://img.youtube.com/vi/5tM_QZ0fAQI/0.jpg" alt="YouTube Video Thumbnail" class="yt-thumbnail">
+        </a>
+    </div>
+    
+
+    <div class="yt-container">
+        <div class="yt-section yt-section4">One and Only</div>
+    </div>
+    
+    <h3 class="photo-title">PHOTO</h3> <!-- PHOTO 標題 -->
+<!-- 幻燈片容器 -->
+<div class="slideshow-container">
+    <div class="mySlides fade">
+        <img src="photo/AND1.png" alt="Slide 1">
+    </div>
+    <div class="mySlides fade">
+        <img src="photo/AND2.jpeg" alt="Slide 2">
+    </div>
+    <div class="mySlides fade">
+        <img src="photo/AND3.jpeg" alt="Slide 3">
+    </div>
+    <div class="mySlides fade">
+        <img src="photo/AND4.png" alt="Slide 4">
+    </div>
+    <div class="mySlides fade">
+        <img src="photo/AND5.jpeg" alt="Slide 5">
+    </div>
+    <div class="mySlides fade">
+        <img src="photo/AND6.jpeg" alt="Slide 6">
+    </div>
+    <div class="mySlides fade">
+        <img src="photo/AND7.jpeg" alt="Slide 7">
+    </div>
+    <div class="mySlides fade">
+        <img src="photo/AND7-1.jpeg" alt="Slide 8">
+    </div>
+      
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+      
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+    <span class="dot" onclick="currentSlide(4)"></span> 
+    <span class="dot" onclick="currentSlide(5)"></span> 
+    <span class="dot" onclick="currentSlide(6)"></span> 
+    <span class="dot" onclick="currentSlide(7)"></span> 
+    <span class="dot" onclick="currentSlide(8)"></span> 
+</div>
+
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+</script>
+
+    
+
+
+</body>
+</html>

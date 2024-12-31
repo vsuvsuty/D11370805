@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- 引入 Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@0,225;1,225&family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- 引入樣式表 -->
+    <link rel="stylesheet" href="首頁.css">
+
+    <style>
+        * {box-sizing: border-box;}
+        
+
+        /* Slideshow container */
+        .slideshow-container {
+            width: 80%;
+            max-width: 800px;
+            position: relative;
+            margin: 80px auto;
+            z-index: 1; /* 確保幻燈片位於背景之上 */
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+            display: none;
+        }
+
+        /* Next & previous buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            user-select: none;
+            z-index: 1; /* 按鈕位於背景之上 */
+        }
+
+        .next {
+            right: 0;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: #809bc78b;
+        }
+
+        /* Dot indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #809bc700;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+            background-color: #809bc700;
+        }
+
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+
+        .mySlides img {
+            width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 背景圖層 -->
+    <div class="background-layer"></div>
+
+<!-- 固定頂部導航欄 -->
+<div id="top">
+    <ul>
+      <li><a href="ARTIST.html" class="artist-link">ARTIST</a>
+        <!-- 下拉選單 -->
+        <ul class="dropdown">
+            <li><a href="SUNGHO.html">SUNGHO</a></li>
+            <li><a href="RIWOO.html">RIWOO</a></li>
+            <li><a href="MJH.html">JaeHyun</a></li>
+            <li><a href="TAESAN.html">TAESAN</a></li>
+            <li><a href="LEEHAN.html">LEEHAN</a></li>
+            <li><a href="WOONHAK.html">WOONHAK</a></li>
+        </ul>
+    </li>
+        <li><a href="who.html">ALBUMS</a>
+            <!-- 下拉選單 -->
+            <ul class="dropdown">
+                <li><a href="who.html">WHO!</a></li>
+                <li><a href="whyT.html">WHY..</a></li>
+                <li><a href="how.html">HOW?</a></li>
+                <li><a href="and.html">AND,</a></li>
+                <li><a href="1999.html">19.99</a></li>
+            </ul>
+        </li>
+        <li><a href="Show.html">SHOW</a></li>
+        <li><a href="Official.html">OFFICIAL</a></li>
+    </ul>
+</div>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- 引入 Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@0,225;1,225&family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- 引入樣式表 -->
+    <link rel="stylesheet" href="首頁.css">
+
+    <style>
+        * {box-sizing: border-box;}
+        
+        /* 全屏背景圖層 */
+        .background-layer {
+            position: fixed;
+            top: 30;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('photo/A1\ \(4\).jpeg '); /* 請將圖片路徑替換為您自己的 */
+            background-size: cover;
+            background-position: center;
+            z-index: -1; /* 背景層位於所有內容之下 */
+            opacity: 30%; /* 調整透明度 */
+        }
+/* 整體 logo 容器樣式 */
+/* 整體 logo 容器樣式 */
+.logo-container-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 100px;  /* 將 LOGO 間距調小 */
+    padding-top: 200px;
+    width: 100%;
+}
+
+/* 單個 LOGO 容器 */
+.logo-container {
+    text-align: center;
+}
+
+/* LOGO 圖片樣式 */
+.logo {
+    width: 180px;
+    height: auto;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+/* 圖片下方文字樣式 */
+.logo-text {
+    font-size: 20px;
+    color: #1e2f5b;
+    margin-top: 10px;
+}
+
+
+    </style>
+</head>
+<body>
+    <!-- 背景圖層 -->
+    <div class="background-layer"></div>
+
+    <!-- 固定頂部導航欄 -->
+     <div id="top">
+        <ul>
+            <li><a href="HOME.html">HOME</a></li>
+            <li><a href="ARTIST.html" class="artist-link">ARTIST</a>
+                <ul class="dropdown">
+                    <li><a href="SUNGHO.html">SUNGHO</a></li>
+                    <li><a href="RIWOO.html">RIWOO</a></li>
+                    <li><a href="MJH.html">JaeHyun</a></li>
+                    <li><a href="TAESAN.html">TAESAN</a></li>
+                    <li><a href="LEEHAN.html">LEEHAN</a></li>
+                    <li><a href="WOONHAK.html">WOONHAK</a></li>
+                </ul>
+            </li>
+                <li><a href="who.html">ALBUMS</a>
+                    <!-- 下拉選單 -->
+                    <ul class="dropdown">
+                        <li><a href="who.html">WHO!</a></li>
+                        <li><a href="whyT.html">WHY..</a></li>
+                        <li><a href="how.html">HOW?</a></li>
+                        <li><a href="and.html">AND,</a></li>
+                        <li><a href="1999.html">19.99</a></li>
+                    </ul>
+                </li>
+                <li><a href="Official.html">OFFICIAL</a></li>
+        </ul>
+    </div>
+    
+    <div class="logo-container-wrapper">
+        <div class="logo-container">
+            <a href="https://x.com/BND_insta" target="_blank">
+                <img src="photo/LOGO1.jpg" alt="網站LOGO" class="logo">
+            </a>
+            <p class="logo-text">TWITTER</p>
+        </div>
+        <div class="logo-container">
+            <a href="https://www.youtube.com/@boynextdoor_official" target="_blank">
+                <img src="photo/LOGO2.png" alt="網站LOGO" class="logo">
+            </a>
+            <p class="logo-text">YOUTUBE</p>
+        </div>
+        <div class="logo-container">
+            <a href="https://www.instagram.com/boynextdoor_official/" target="_blank">
+                <img src="photo/LOGO3.png" alt="網站LOGO" class="logo">
+            </a>
+            <p class="logo-text">INSTAGRAM</p>
+        </div>
+    </div>
+    
+</div>
+
